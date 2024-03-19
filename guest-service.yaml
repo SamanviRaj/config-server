@@ -1,2 +1,15 @@
 server:
     port: 8081
+
+spring:
+  config:
+      import: configserver:http://localhost:8888
+  datasource:
+    url: jdbc:postgresql://localhost:5432/guest_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+      hibernate:
+        ddl-auto: update
