@@ -1,7 +1,7 @@
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/guest_db
+    url: jdbc:postgresql://localhost:5432/room_db
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
@@ -12,6 +12,9 @@ spring:
     config:
       uri: http://localhost:8888  # URL of your Config Server
       label: master  # Optional: Specify a specific Git branch/label (defaults to master)
-
+      
 server:
-    port: 8081
+  port: 8083
+
+
+
