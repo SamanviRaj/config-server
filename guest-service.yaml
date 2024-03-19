@@ -11,3 +11,9 @@ spring:
       database-platform: org.hibernate.dialect.PostgreSQL9Dialect
       hibernate:
         ddl-auto: update
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Expose all endpoints
