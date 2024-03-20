@@ -8,7 +8,7 @@ spring:
     password: postgres
     driver-class-name: org.postgresql.Driver
     jpa:
-      database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
       hibernate:
         ddl-auto: update
         
