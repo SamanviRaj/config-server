@@ -1,0 +1,19 @@
+server:
+    port: 8075
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: guest-service-route
+          uri: http://localhost:8081
+          predicates:
+            - Path=/guests/**
+        - id: reservation-service-route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/reservations/**
+        - id: room-service-route
+          uri: http://localhost:8083
+          predicates:
+            - Path=/rooms/**
