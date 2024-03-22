@@ -17,3 +17,18 @@ management:
     web:
       exposure:
         include: "*"  # Expose all endpoints
+
+# Configuration for Feign clients
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000  # Connection timeout in milliseconds
+        readTimeout: 5000     # Read timeout in milliseconds
+
+# URLs for guest and room services
+guest-service:
+  url: http://localhost:8081  # Placeholder URL for guest service
+
+room-service:
+  url: http://localhost:8083  # Placeholder URL for room service
