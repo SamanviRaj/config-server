@@ -9,13 +9,13 @@ spring:
         - id: guest-service
           uri: lb://guest-service
           predicates:
-            - Path=/api/guests/**
+            - Path=/api/guests
         - id: reservation-service
           uri: lb://reservation-service
           predicates:
-            - Path=/api/reservations/**
+            - Path=/api/reservations
         - id: room-service
           uri: lb://room-service
           predicates:
-            - Path=/api/rooms/**
+            - Path=/api/rooms
 
