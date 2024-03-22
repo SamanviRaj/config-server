@@ -8,12 +8,12 @@ spring:
         - id: guest-service-route
           uri: http://localhost:8081
           predicates:
-            - Path=/guests/**
+            - Path=/api/guests/**
         - id: reservation-service-route
           uri: http://localhost:8082
           predicates:
-            - Path=/reservations/**
+            - Path=/api/reservations/**
         - id: room-service-route
           uri: http://localhost:8083
           predicates:
-            - Path=/rooms/**
+            - Path=/api/rooms/**
