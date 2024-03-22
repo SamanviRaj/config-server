@@ -1,6 +1,7 @@
 server:
     port: 8075
 
+# API Gateway routes configuration
 spring:
   cloud:
     gateway:
