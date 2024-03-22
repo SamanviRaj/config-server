@@ -6,16 +6,16 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: guest-service-route
-          uri: lb://GUEST-SERVICE
+        - id: guest-service
+          uri: lb://guest-service
           predicates:
             - Path=/api/guests/**
-        - id: reservation-service-route
-          uri: lb://RESERVATION-SERVICE
+        - id: reservation-service
+          uri: lb://reservation-service
           predicates:
             - Path=/api/reservations/**
-        - id: room-service-route
-          uri: lb://ROOM-SERVICE
+        - id: room-service
+          uri: lb://room-service
           predicates:
             - Path=/api/rooms/**
 
