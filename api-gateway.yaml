@@ -1,5 +1,5 @@
 server:
-    port: 8075
+    port: 8989
 
 # API Gateway routes configuration
 spring:
