@@ -19,7 +19,9 @@ spring:
           predicates:
             - Path=/api/rooms/**
 
-eureka:
-  instance:
-    hostname: localhost
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Expose all endpoints
 
