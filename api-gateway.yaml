@@ -19,3 +19,7 @@ spring:
           predicates:
             - Path=/api/rooms/**
 
+eureka:
+  instance:
+    hostname: localhost
+
