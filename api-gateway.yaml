@@ -6,15 +6,15 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: guest-service
+        - id: GUEST-SERVICE
           uri: lb://GUEST-SERVICE
           predicates:
             - Path=/api/guests/**
-        - id: reservation-service
+        - id: RESERVATION-SERVICE
           uri: lb://RESERVATION-SERVICE
           predicates:
             - Path=/api/reservations/**
-        - id: room-service
+        - id: ROOM-SERVICE
           uri: lb://ROOM-SERVICE
           predicates:
             - Path=/api/rooms/**
@@ -24,4 +24,13 @@ management:
     web:
       exposure:
         include: "*"  # Expose all endpoints
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
 

@@ -32,3 +32,12 @@ guest-service:
 
 room-service:
   url: http://localhost:8083  # Placeholder URL for room service
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
