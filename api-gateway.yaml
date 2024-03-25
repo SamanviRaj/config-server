@@ -7,15 +7,15 @@ spring:
     gateway:
       routes:
         - id: GUEST-SERVICE
-          uri: lb://GUEST-SERVICE
+          uri: http://localhost:8081
           predicates:
             - Path=/api/guests/**
         - id: RESERVATION-SERVICE
-          uri: lb://RESERVATION-SERVICE
+          uri: http://localhost:8082
           predicates:
             - Path=/api/reservations/**
         - id: ROOM-SERVICE
-          uri: lb://ROOM-SERVICE
+          uri: http://localhost:8083
           predicates:
             - Path=/api/rooms/**
 

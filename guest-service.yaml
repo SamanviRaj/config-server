@@ -17,6 +17,8 @@ management:
     web:
       exposure:
         include: "*"  # Expose all endpoints
+  tracing:
+    sample-rate: 1.0
 
 eureka:
   client:
