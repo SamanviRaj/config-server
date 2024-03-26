@@ -5,6 +5,10 @@ server:
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowercase-service-id: true
       routes:
         - id: GUEST-SERVICE
           uri: http://localhost:8081
