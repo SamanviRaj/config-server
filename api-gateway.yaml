@@ -3,6 +3,8 @@ server:
 
 # API Gateway routes configuration
 spring:
+  main:
+    web-application-type: reactive
   cloud:
     gateway:
       discovery:
